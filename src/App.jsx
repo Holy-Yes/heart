@@ -1,11 +1,13 @@
+import { useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, Environment } from '@react-three/drei'
 import { Heart } from './Heart.jsx'
 import Dashboard from './Dashboard.jsx'
+import LoginPage from './LoginPage.jsx'
 
 function Scene() {
   return (
-    <Canvas 
+    <Canvas
       camera={{ position: [0, 0, 4], fov: 45 }}
       style={{ background: '#020209' }}
     >
@@ -19,12 +21,18 @@ function Scene() {
 }
 
 export default function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  if (!isLoggedIn) {
+    return <LoginPage onLogin={() => setIsLoggedIn(true)} />;
+  }
+
   return (
-    <div style={{ 
-      position: 'relative', 
-      width: '100vw', 
+    <div style={{
+      position: 'relative',
+      width: '100vw',
       height: '100vh',
-      background: '#020209' 
+      background: '#020209'
     }}>
       <Scene />
       <Dashboard />

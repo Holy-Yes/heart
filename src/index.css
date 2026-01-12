@@ -1,21 +1,5 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html, body, #root { height: 100%; }
-body { background: radial-gradient(ellipse at top, #1e0033 0%, #00020a 70%); font-family: system-ui, -apple-system, sans-serif; }
-
-.app { position: relative; width: 100vw; height: 100vh; }
-canvas { display: block; }
-
-.dashboard {
-  position: absolute; top: 20px; right: 20px; width: 340px; z-index: 100;
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.card { 
-  backdrop-filter: blur(20px); 
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: white;
-}
-.card h6 { color: #ff4081; margin-bottom: 16px; }
-.MuiSlider-root { color: #ff4081 !important; height: 6px; }
-.MuiSlider-thumb { color: #ff1744 !important; }
-.MuiSlider-track { color: #ff4081 !important; }
-.MuiSlider-rail { color: rgba(255,64,129,0.3) !important; }
